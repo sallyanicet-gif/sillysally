@@ -11,7 +11,7 @@ body {
   align-items: center;
   justify-content: center;
   font-family: "Tahoma", Arial, sans-serif;
-  background: #5a7fbe;
+  background: url('images/bg.gif') center center / cover no-repeat;
   overflow: hidden;
   position: relative;
 }
