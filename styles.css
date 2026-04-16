@@ -6,14 +6,16 @@
 
 body {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   font-family: "Tahoma", Arial, sans-serif;
-  background: url('images/bg.gif') center center / cover no-repeat;
-  overflow: hidden;
+  background: url('images/bg.gif') center center / cover no-repeat fixed;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
+  padding: 20px 0;
 }
 
 /* Background effects */
@@ -70,7 +72,7 @@ body {
   position: relative;
   width: 100%;
   max-width: 600px;
-  margin: 0 20px;
+  margin: 0 12px;
   animation: windowOpen 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -169,7 +171,6 @@ body {
 .window-content {
   background: linear-gradient(to bottom, #ecf4ff 0%, #d8e9f7 100%);
   padding: 24px;
-  min-height: 400px;
 }
 
 /* Pages */
@@ -592,12 +593,82 @@ body {
 
 /* Responsive */
 @media (max-width: 600px) {
+  body {
+    padding: 10px 0;
+    align-items: flex-start;
+  }
+
+  .window-container {
+    margin: 0 8px;
+  }
+
+  .window-content {
+    padding: 16px;
+  }
+
   .nav-btn {
     font-size: 10px;
-    padding: 6px 10px;
+    padding: 6px 8px;
   }
+
   .interest-grid {
     grid-template-columns: 1fr;
+    padding: 0 8px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    padding: 0 8px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .page-heading {
+    padding: 0 8px;
+    font-size: 15px;
+  }
+
+  .content-box {
+    margin: 0 8px;
+  }
+
+  .image-box {
+    margin: 0 8px;
+  }
+
+  .form-section {
+    padding: 0 8px;
+  }
+
+  .section-divider {
+    padding: 0 8px;
+  }
+
+  .note-box {
+    margin: 0 8px 12px;
+  }
+
+  .scroll-box {
+    max-height: 200px;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile-name {
+    font-size: 20px;
+  }
+
+  .tos-table {
+    font-size: 11px;
+  }
+
+  .tos-th, .tos-td {
+    padding: 4px 6px;
   }
 }
 /* Contact-specific styles */
